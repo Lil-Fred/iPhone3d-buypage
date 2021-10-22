@@ -1,0 +1,340 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SFUIText-Regular", "Inter", sans-serif;
+    /* font-weight: 300; */
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+
+.btnToggle{
+    position: absolute;
+    font-size: larger;
+    font-weight:bold ;
+    border: none;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+     transform: translate(-50%,-50%); 
+     cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 100%;
+    background-color: red;
+}
+
+a{
+    cursor: pointer;
+    color: #0071e2;
+    text-decoration: none;
+    
+}
+
+li{
+    list-style: none;
+}
+
+
+/* Second NAVBAR */
+.second_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right:10rem;
+    padding-left:10rem;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin-bottom: 1.8rem;
+}
+
+
+/* NETWORKS_OFFERS ||||||*/
+
+.Netwoks_offers{
+padding-right:10rem;
+padding-left:10rem;
+margin-bottom: 5rem;
+
+}
+
+.Netwoks_offers ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:1rem;
+    padding-left:1rem;
+    padding-bottom:1rem;
+    padding-top:1rem;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #fafaff;
+}
+
+.Netwoks_offers img{
+width: 55%;
+height: auto;
+}
+
+.show_deals{
+    font-weight: 500;
+    font-size:12.5px;
+    color: black;
+}
+
+.C_alldeals{
+    text-align: left;
+    max-width:180px;
+}
+
+
+
+.C_alldeals a{
+   
+    font-size:13.3px;
+}
+
+/* Buying_Section */
+.buy_sec{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    justify-self: center;
+    }
+
+.buy_sec_div1{
+    justify-self: center;
+    margin-right: 3rem;
+  
+}
+.buy_sec_div2{
+    justify-self: center;
+
+}
+
+#displaced_div h1{
+    margin-top: 5px;
+    font-size:40px;
+}
+
+    #displaced_div p{
+    font-size:16px;   
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 25px;
+
+}
+
+.buy_sec_div2 ul{
+  margin-top: 2rem;
+  
+}
+
+.buy_sec_div2 ul a{
+  font-size: 14px;
+  line-height: 2rem;
+  }
+
+       /* HUGE BTNS */
+  .buy_sec_div2 button{
+    font-family: "SFUIText-Regular";
+      font-size: 14px;
+    background-color: white;
+    border: 1px solid rgb(187, 187, 187);
+   width: 380px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+   column-gap: 5rem;
+   margin-top: 1rem;
+   text-align: left;
+cursor: pointer;
+   /* align-items:center; */
+}
+
+.buy_sec_div2 button:hover{
+border: 2px solid #0071E3;
+
+}
+.buy_sec_div2 button h2{
+    font-family: "SFUIText-Light";
+    font-size: 16.5px;
+    opacity: 65%;
+    text-align: right;
+    align-self: center;
+
+}
+
+
+/* #decoy{
+    width: 80vw;
+    height: auto;
+} */
+canvas{
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 2rem;
+    transition: opacity 1s ease-in-out !important;
+}
+
+.off {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    height: 0 !important;
+    width: 0 !important;
+  
+    transition: opacity 1s ease-in-out !important;
+  }
+  
+
+/* Media Queries */
+   @media (max-width: 900px) {
+        .second_nav{
+        display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right:2rem;
+            padding-left:2rem;
+            margin-bottom: 0rem;
+        }
+  
+        .second_nav h4{
+            text-align: right;
+            font-family: "SFUIText-Light";
+        }
+
+      .Netwoks_offers{
+        padding-right:0rem;
+        padding-left:0rem;
+        margin-bottom: 0rem;
+     
+       }
+       .network_Txt{
+        font-family: "SFUIText-Bold";
+        font-weight: bolder;
+        font-size:14px;
+    } 
+
+        .Netwoks_offers ul{
+            flex-direction: column;
+            align-items: flex-start;
+            padding-right:1.5rem;
+            padding-left:1.5rem;
+            border-radius: 0px;
+            text-align: left;
+        }
+
+        .show_deals{
+            font-family: "SFUIText-Light";
+            font-weight: 300;
+            font-size:12.5px;
+            color: black;
+        } 
+
+        .C_alldeals h4{
+            font-size:16.5px !important;
+        }
+
+        .C_alldeals{
+            min-width:90%;
+
+        }
+
+        .Netwoks_offers li{
+                  line-height: 2rem;
+        }
+       
+
+       /* Buying_Section_Media query */
+        .buy_sec{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            }
+
+        .buy_sec_div1{
+            justify-content: center;
+            align-self: center;
+            margin-right: 0rem;
+          
+        }
+        .buy_sec_div2{
+            align-self: center;
+        }
+
+        #displaced_div{
+            text-align: center;
+            border-top: 1px solid rgb(231, 231, 231);
+            margin-top: 2rem;
+            
+        }
+
+        #displaced_div h1{
+            margin-top: 0px;
+            
+        }
+        #displaced_div p:first-child{
+            margin-top: 3rem;
+        }
+
+        #displaced_div p{
+           min-width: 100%;
+            }
+
+            #only_mobile ul{
+               text-align: center;
+                display: grid;
+                grid-template-columns: repeat(6,1fr);
+                overflow-x: scroll;
+                
+            }
+
+            #only_mobile ul img{
+                width: 120px;
+             align-self: center;
+
+            }
+
+
+    }
+
+
+    @font-face {
+        font-family: "SFUIText-Regular";
+        src: url(./src/sf_ui-font/SFUIText-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: "SFUIText-Medium";
+        src: url(./src/sf_ui-font/SFUIText-Medium.ttf);
+    }
+
+    @font-face {
+        font-family: "SFUIText-Bold";
+        src: url(./src/sf_ui-font/SFUIText-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: "SFUIText-Semibold";
+        src: url(./src/sf_ui-font/SFUIText-Semibold.ttf);
+    }
+
+    @font-face {
+        font-family: "SFUIText-Light";
+        src: url(./src/sf_ui-font/SFUIText-Light.ttf);
+    }
+
+    @font-face {
+        font-family: "SFUIText-Heavy";
+        src: url(./src/sf_ui-font/SFUIText-Heavy.ttf);
+    }
