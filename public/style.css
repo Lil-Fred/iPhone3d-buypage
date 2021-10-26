@@ -12,20 +12,22 @@ body {
     overflow-y: scroll;
     overflow-x:hidden;
 }
+.hide_behind{
+    z-index:-2;
+    position: relative;
+}
 
 .btnToggle{
     position: absolute;
-    font-size: larger;
+    left: 30%;
+    bottom: 50%;
+    font-weight:lighter;
     font-weight:bold ;
-    border: none;
-    position: absolute;
-    top: 45%;
-    left: 35%;
-     transform: translate(-50%,-50%); 
+    font-size: 30px;
+     /* transform: translate(-50%,-50%);   */
      cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 100%;
-    background-color: red;
+     color: black;
+     font-family: "SFUIText-Bold";
 }
 
 a{
@@ -175,10 +177,7 @@ border: 2px solid #0071E3;
 }
 
 
-/* #decoy{
-    width: 80vw;
-    height: auto;
-} */
+
 canvas{
     width: 100% !important;
     height: auto !important;
@@ -199,6 +198,14 @@ canvas{
 
 /* Media Queries */
    @media (max-width: 900px) {
+    .btnToggle{
+        position: absolute;
+        left: 50%;
+        bottom: 7%;
+        transform: translate(-50%,-50%);   
+  
+    }
+
         .second_nav{
         display: flex;
             flex-direction: row;

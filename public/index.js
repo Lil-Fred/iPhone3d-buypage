@@ -32,8 +32,7 @@ const navContainer = document.querySelector(".nav-container");
 
 menuIconContainer.addEventListener("click", () => {
     navContainer.classList.toggle("active");
-
-
+    document.querySelector('.minus_nav').classList.toggle('hide_behind')
 })
 
 
@@ -46,12 +45,15 @@ searchInput.addEventListener("click", () => {
     searchBar.classList.add("active");
     nav.classList.add("move-up");
     desktopNav.classList.add("move-down");
+ 
+
 })
 
 cancelBtn.addEventListener("click", () => {
     searchBar.classList.remove("active");
     nav.classList.remove("move-up");
     desktopNav.classList.remove("move-down");
+
 })
 
 

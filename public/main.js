@@ -10,34 +10,34 @@ function init() {
   renderer.domElement.id = "3ddom";
   renderer.domElement.classList.add("off");
 
-   const imgTo3d = document.createElement('button');
+   const imgTo3d = document.createElement('span');
   imgTo3d.classList.add('btnToggle')
-  imgTo3d.textContent +='3d';
-  document.getElementById("phone_div").insertAdjacentElement("afterbegin", imgTo3d);
-   imgTo3d.addEventListener("click", function () {
+  imgTo3d.innerText ='3D';
+  imgTo3d.addEventListener("click", function () {
+    if (imgTo3d.innerText ==='3D') {
+      imgTo3d.innerText ='✖'
+    } else {
+      imgTo3d.innerText ='3D'
+    }
     iPhone3D.classList.toggle("off");
      iphone_img.classList.toggle("off");
-    if (window.innerWidth <= 900) {
-      // document.querySelector(".buy_sec_div1").style = "margin-right: 0rem; "
+  })
+
+  if (window.innerWidth <= 900) {
+    document.getElementById("displaced_div").insertAdjacentElement('beforeend', imgTo3d);
+    imgTo3d.addEventListener("click", function () {
       document.querySelector(".buy_sec").style = "padding-right: 0rem;"
       model.position.set(0, 0, 0); 
       model.scale.set(2.8, 2.8, 2.8);
-      // alert("This is a mobile device.");
-    } else {
+    })
+    
+  }else{
+     document.getElementById("phone_div").insertAdjacentElement('beforebegin', imgTo3d);
+     imgTo3d.addEventListener("click", function () {
       document.querySelector(".buy_sec_div1").style = "margin-right: 0rem; "
      document.querySelector(".buy_sec").style = "padding-right: 9rem;"
-      // alert("This is a tablet or desktop.");
-    }
-    // document.querySelector(".buy_sec").style = ""
-
-   // alert("Model Loaded");
-  });
-
-  document.getElementById("forimg").addEventListener("click", function () {
-    iPhone3D.classList.add("off");
-    iphone_img.classList.remove("off");
-   // alert("Image loaded");
-  });
+    })
+  }
 
     camera = new THREE.PerspectiveCamera(
       60,
@@ -63,8 +63,6 @@ function init() {
   const iPhone3D = document.getElementById("3ddom");
 
 
-  // renderer.shadowMap.enabled = true;
-  // renderer.gameOutput = true
 
   scene.add(new THREE.AxesHelper(500));
 
@@ -81,7 +79,7 @@ function init() {
  // scene.add(floor);
 
   new THREE.GLTFLoader().load(
-    "scene.glb",
+    "model/scene.glb",
     (result) => {
       model = result.scene.children[0];
       model.scale.set(3.3, 3.3, 3.3);
@@ -116,30 +114,7 @@ function init() {
   scene.add(hemilight);
 }
 
-// if (window.innerWidth <= 900) {
-//   var Start = function () {
-//     camera.position.set(0, 0, 3.5);
-//     //  scene.background = new THREE.Color(0x88888);
-//   };
-  
-//   // alert("This is a mobile device.");
-// } else {
-//   var Start = function () {
-//     camera.position.set(0, 0, 3);
- 
-//   };
 
-//   // alert("This is a tablet or desktop.");
-// }
-
-
-// let frame = 0;
-// var Update = function () {
-//   if (frame == 0) {
-//     Start();
-//     frame += 1;
-//   }
-// };
 
 function animate() {
   requestAnimationFrame(animate);
