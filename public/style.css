@@ -16,15 +16,15 @@ body {
     z-index:-2;
     position: relative;
 }
-
-.btnToggle{
+ 
+      /* ------------- 3D to X BTN ------------- */
+.spanToggle{
     position: absolute;
     left: 30%;
     bottom: 50%;
     font-weight:lighter;
     font-weight:bold ;
     font-size: 30px;
-     /* transform: translate(-50%,-50%);   */
      cursor: pointer;
      color: black;
      font-family: "SFUIText-Bold";
@@ -56,16 +56,16 @@ li{
 }
 
 
-/* NETWORKS_OFFERS ||||||*/
+/*--------CarrierDeals--------*/
 
-.Netwoks_offers{
+.carrierDeals{
 padding-right:10rem;
 padding-left:10rem;
 margin-bottom: 5rem;
 
 }
 
-.Netwoks_offers ul{
+.carrierDeals ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,7 +79,7 @@ margin-bottom: 5rem;
     background-color: #fafaff;
 }
 
-.Netwoks_offers img{
+.carrierDeals img{
 width: 55%;
 height: auto;
 }
@@ -102,7 +102,7 @@ height: auto;
     font-size:13.3px;
 }
 
-/* Buying_Section */
+/*-------Buying_Section------*/
 .buy_sec{
     display: flex;
     flex-direction: row;
@@ -144,7 +144,7 @@ height: auto;
   line-height: 2rem;
   }
 
-       /* HUGE BTNS */
+       /*-----HUGE BTNS----*/
   .buy_sec_div2 button{
     font-family: "SFUIText-Regular";
       font-size: 14px;
@@ -196,16 +196,16 @@ canvas{
   }
   
 
-/* Media Queries */
+/*---------------------------------------Media Queries--------------------------------*/
    @media (max-width: 900px) {
-    .btnToggle{
+    .spanToggle{
         position: absolute;
         left: 50%;
-        bottom: 7%;
+        bottom: 0%;
         transform: translate(-50%,-50%);   
   
     }
-
+         /*=====================second_nav===========*/
         .second_nav{
         display: flex;
             flex-direction: row;
@@ -220,19 +220,20 @@ canvas{
             font-family: "SFUIText-Light";
         }
 
-      .Netwoks_offers{
+        /* ==============CarrierDeals @ Apple============ */
+      .carrierDeals{
         padding-right:0rem;
         padding-left:0rem;
         margin-bottom: 0rem;
      
        }
-       .network_Txt{
+       .Carrier_Txt{
         font-family: "SFUIText-Bold";
         font-weight: bolder;
         font-size:14px;
     } 
 
-        .Netwoks_offers ul{
+        .carrierDeals ul{
             flex-direction: column;
             align-items: flex-start;
             padding-right:1.5rem;
@@ -257,12 +258,12 @@ canvas{
 
         }
 
-        .Netwoks_offers li{
+        .carrierDeals li{
                   line-height: 2rem;
         }
        
 
-       /* Buying_Section_Media query */
+       /*------------------Buying_Section_Media query-----------*/
         .buy_sec{
             display: flex;
             flex-direction: column;
@@ -278,12 +279,12 @@ canvas{
         .buy_sec_div2{
             align-self: center;
         }
-
+          
         #displaced_div{
             text-align: center;
             border-top: 1px solid rgb(231, 231, 231);
             margin-top: 2rem;
-            
+        
         }
 
         #displaced_div h1{
@@ -297,8 +298,8 @@ canvas{
         #displaced_div p{
            min-width: 100%;
             }
-
-            #only_mobile ul{
+                 /* ============== ONLY MOBILE ul ============ */
+            #iPhone_specialistChat ul{
                text-align: center;
                 display: grid;
                 grid-template-columns: repeat(6,1fr);
@@ -306,7 +307,7 @@ canvas{
                 
             }
 
-            #only_mobile ul img{
+            #iPhone_specialistChat ul img{
                 width: 120px;
              align-self: center;
 
@@ -315,6 +316,7 @@ canvas{
 
     }
 
+    /*======================APPLE FONT IMPORTING================*/
 
     @font-face {
         font-family: "SFUIText-Regular";
