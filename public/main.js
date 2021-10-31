@@ -29,7 +29,7 @@ function init() {
   })
 
   if (window.innerWidth <= 900) {
-    document.getElementById("displaced_div").insertAdjacentElement('beforeend', imgTomodel);
+    document.getElementById("displaced_div").insertAdjacentElement('beforebegin', imgTomodel);
     imgTomodel.addEventListener("click", function () {
       document.querySelector(".buy_sec").style = "padding-right: 0rem;"
       model.position.set(0, 0, 0);
