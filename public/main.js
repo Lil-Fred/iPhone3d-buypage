@@ -39,7 +39,6 @@ function init() {
   } else {
     document.getElementById("phone_div").insertAdjacentElement('beforebegin', imgTomodel);
     imgTomodel.addEventListener("click", function () {
-      document.querySelector(".buy_sec_div1").style = "margin-right: 0rem; "
       document.querySelector(".buy_sec").style = "padding-right: 9rem;"
     })
   }
