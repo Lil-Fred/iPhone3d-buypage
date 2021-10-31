@@ -11,9 +11,10 @@ function init() {
   renderer.domElement.classList.add("off");
 
   //  3D to X SPAN 
-  const imgTomodel = document.createElement('span');
+
+  const imgTomodel =  document.createElement("span")
   imgTomodel.classList.add('spanToggle')
-  imgTomodel.innerText = '3D';
+   imgTomodel.innerText = '3D';
 
   const iphone_img = document.getElementById("iphone-img");
   const iPhone3D = document.getElementById("3ddom");
@@ -29,7 +30,7 @@ function init() {
   })
 
   if (window.innerWidth <= 900) {
-    document.getElementById("displaced_div").insertAdjacentElement('beforebegin', imgTomodel);
+    document.getElementById("iphone-img").insertAdjacentElement('beforebegin', imgTomodel);
     imgTomodel.addEventListener("click", function () {
       document.querySelector(".buy_sec").style = "padding-right: 0rem;"
       model.position.set(0, 0, 0);
@@ -37,7 +38,7 @@ function init() {
     })
 
   } else {
-    document.getElementById("phone_div").insertAdjacentElement('beforebegin', imgTomodel);
+    document.getElementById("displaced_div").insertAdjacentElement('beforebegin', imgTomodel);
     imgTomodel.addEventListener("click", function () {
       document.querySelector(".buy_sec").style = "padding-right: 9rem;"
     })

@@ -10,7 +10,7 @@ body {
     font-family: "SFUIText-Regular", "Inter", sans-serif;
     /* font-weight: 300; */
     overflow-y: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 .hide_behind{
     z-index:-2;
@@ -19,9 +19,9 @@ body {
  
       /* ------------- 3D to X BTN ------------- */
 .spanToggle{
-    position: absolute;
+     position: absolute;
     left: 30%;
-    bottom: 50%;
+    bottom: 50%; 
     font-weight:lighter;
     font-weight:bold ;
     font-size: 30px;
@@ -201,8 +201,9 @@ canvas{
     .spanToggle{
         position: absolute;
         left: 50%;
-        bottom: 0%;
-        transform: translate(-50%,-50%);   
+        bottom: auto; 
+         margin-top: 2rem;
+        transform: translate(-50%,-50%);    
   
     }
          /*=====================second_nav===========*/
@@ -284,6 +285,7 @@ canvas{
             text-align: center;
             border-top: 1px solid rgb(231, 231, 231);
             margin-top: 2rem;
+       
         
         }
 
